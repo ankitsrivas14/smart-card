@@ -3,7 +3,19 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
+import moment from 'moment';
+
+import VueSweetalert2 from 'vue-sweetalert2';
+import 'sweetalert2/dist/sweetalert2.min.css';
+
+import firebase from 'firebase'
+import 'firebase/auth'
+import firebaseConfig from './utils/config.js'
+firebase.initializeApp(firebaseConfig);
+
 Vue.config.productionTip = false
+Vue.use(moment);
+Vue.use(VueSweetalert2);
 
 new Vue({
   router,

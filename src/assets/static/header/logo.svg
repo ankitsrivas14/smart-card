@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="388.345" height="114" viewBox="0 0 388.345 114">
+  <defs>
+    <filter id="Path_20" x="0" y="0" width="388.345" height="114" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Smart_Card" x="69.923" y="0" width="294" height="114" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.31"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="rect10401" x="14.42" y="23.67" width="50.563" height="69.558" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-3"/>
+      <feFlood flood-opacity="0.31"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_49" data-name="Group 49" transform="translate(-292.333 -10)">
+    <g transform="matrix(1, 0, 0, 1, 292.33, 10)" filter="url(#Path_20)">
+      <path id="Path_20-2" data-name="Path 20" d="M3.413,0H366.932c1.885,0,3.413,1.889,3.413,4.22V91.78c0,2.331-1.528,4.22-3.413,4.22H3.413C1.528,96,0,94.111,0,91.78V4.22C0,1.889,1.528,0,3.413,0Z" transform="translate(9 6)" fill="#f5f5f5"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 292.33, 10)" filter="url(#Smart_Card)">
+      <text id="Smart_Card-2" data-name="Smart Card" transform="translate(78.92 78)" fill="#4f49a2" font-size="69" font-family="Poppins-SemiBold, Poppins" font-weight="600"><tspan x="0" y="0">S</tspan><tspan y="0" font-size="40">mart </tspan><tspan y="0">C</tspan><tspan y="0" font-size="40">ard</tspan></text>
+    </g>
+    <g id="layer1" transform="translate(348.316 39.67) rotate(90)">
+      <g transform="matrix(0, -1, 1, 0, -29.67, 55.98)" filter="url(#rect10401)">
+        <path id="rect10401-2" data-name="rect10401" d="M2.714,0A2.708,2.708,0,0,0,0,2.714V29.849a2.708,2.708,0,0,0,2.714,2.714h46.13a2.708,2.708,0,0,0,2.714-2.714V2.714A2.708,2.708,0,0,0,48.844,0ZM1.357,5.427H50.2v5.427H1.357ZM2.714,21.708h8.141v5.427H2.714Zm24.422,2.714H46.13v2.714H27.136Z" transform="translate(55.98 29.67) rotate(90)" fill="#4f49a2"/>
+      </g>
+    </g>
+  </g>
+</svg>
