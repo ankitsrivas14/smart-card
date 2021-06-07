@@ -47,7 +47,6 @@ export default {
                     .auth()
                     .signInWithEmailAndPassword(this.email, this.password)
                     .then( res => {
-                        console.log(res);
                         this.$router.push({path: '/portals'})
                     })
                     .catch(e => {
@@ -95,10 +94,12 @@ export default {
 <style lang="scss">
 .signin-container{
     padding: 80px 112px;
-    background-image: url('../assets/static/auth/signup.svg') ;
-    background-size: contain;
+    background-image: url('../assets/static/auth/signin.svg') ;
+    background-size: 35%;
     background-repeat: no-repeat;
-    background-position: 550px 100px;
+    background-position: 100px 80px;
+    display: flex;
+    flex-direction: row-reverse;
     .signin-card{
         width: 500px;
         height: 100%;
@@ -107,7 +108,6 @@ export default {
         position: relative;
         border-radius: 4px;
         padding: 35px;
-        float: right;
         &::before{
             content: "";
             height: 100%;

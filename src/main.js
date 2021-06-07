@@ -13,6 +13,12 @@ import 'firebase/auth'
 import firebaseConfig from './utils/config.js'
 firebase.initializeApp(firebaseConfig);
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faUserSecret, faUsers, faBus, faHeartbeat, faUniversity, faCoins, faLightbulb, faQrcode, faBreadSlice, faTimes, faExclamationCircle } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+library.add([faUserSecret,faUsers, faBus, faHeartbeat, faUniversity, faCoins, faLightbulb, faQrcode, faBreadSlice, faTimes, faExclamationCircle])
+Vue.component('font-awesome-icon', FontAwesomeIcon)
+
 Vue.config.productionTip = false
 Vue.use(moment);
 Vue.use(VueSweetalert2);

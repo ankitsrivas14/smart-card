@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 
 import Portals from  '../views/Portals'
+import PortalType from  '../views/PortalType'
 import SignIn from  '../views/SignIn'
 import SignUp from  '../views/SignUp'
 
@@ -25,7 +26,15 @@ const routes = [
     component: Portals,
     meta: {
       auth: true
-    }
+    },
+  },
+  {
+    path: '/portals/:type',
+    name: 'PortalsType',
+    component: PortalType,
+    meta: {
+      auth: true
+    },
   },
   {
     path: '/signin',
