@@ -26,7 +26,7 @@
     </div>
     <div class="active-event__container" v-else>
       <button @click="handleBack" class="back-btn">Go Back</button>
-      <Aadhar />
+      <component :is="activeEvent" />
     </div>
     <SCDialog
       v-if="isEntryAllowed && showDialog"
@@ -39,11 +39,15 @@
 
 <script>
 import SCDialog from "@/components/shared/SCDialog";
-import Aadhar from "@/components/features/Aadhar";
+import aadhar from "@/components/features/Aadhar";
+import pan from "@/components/features/Pan";
+import voter from "@/components/features/Voter";
 
 import { mapGetters } from "vuex";
+import portalsMixin from "./portalsMixin";
 
 export default {
+  mixins: [portalsMixin],
   data() {
     return {
       overlay: {
@@ -75,44 +79,12 @@ export default {
   },
   components: {
     SCDialog,
-    Aadhar,
-  },
-  props: {
-    templateType: {
-      type: Object,
-    },
-  },
-  methods: {
-    handleOptionClick(option) {
-      if (!this.isEntryAllowed) {
-        this.$swal({
-          icon: "error",
-          text: "Invalid authorization detected. Please contact Admin.",
-        });
-      } else {
-        this.showDialog = true;
-        this.activeOption = option;
-      }
-    },
-    handleEventStarted(option) {
-      this.activeEvent = option;
-      this.showDialog = false;
-    },
-    handleCloseDialog() {
-      this.showDialog = false;
-      this.activeOption = null;
-    },
-    handleBack() {
-      this.showDialog = false;
-      this.activeEvent = null;
-      this.activeOption = null;
-    },
+    aadhar,
+    pan,
+    voter,
   },
   computed: {
     ...mapGetters(["isEntryAllowed"]),
-  },
-  beforeRouteLeave(to, from, next) {
-    this.activeEvent = null;
   },
 };
 </script>

@@ -69,6 +69,8 @@ export default {
     padding: 20px;
     width: 100%;
     border-radius: 4px;
+    display: flex;
+    justify-content: center;
   }
 }
 </style>

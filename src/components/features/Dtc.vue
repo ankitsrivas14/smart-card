@@ -7,7 +7,7 @@
     <template slot="body">
       <img
         class="layout-main-image"
-        :src="require('@/assets/static/features/pancard.jpg')"
+        :src="require('@/assets/static/features/aadhar.jpg')"
       />
     </template>
   </SCLayout>

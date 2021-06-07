@@ -1,5 +1,5 @@
 <template>
-  <SCLayout eventType="User Identification">
+  <SCLayout eventType="Transport">
     <template slot="header-cta">
       <button class="primary-btn">Update Biometrics</button>
       <button class="secondary-btn">Update Biometrics</button>
@@ -7,7 +7,9 @@
     <template slot="body">
       <img
         class="layout-main-image"
-        :src="require('@/assets/static/features/pancard.jpg')"
+        :src="require('@/assets/static/features/rc.jpeg')"
+        width="400px"
+        height="250px"
       />
     </template>
   </SCLayout>
