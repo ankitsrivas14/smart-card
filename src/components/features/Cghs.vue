@@ -7,7 +7,7 @@
     <template slot="body">
       <img
         class="layout-main-image"
-        :src="require('@/assets/static/features/rc.jpeg')"
+        :src="require('@/assets/static/features/dl.jpg')"
         width="400px"
         height="250px"
       />
@@ -23,9 +23,9 @@ export default {
   computed: {
     getModeData() {
       return {
-        eventName: "Transport",
-        modeName: "Registration Certificate (RC)",
-        icon: "bus",
+        eventName: "Healthcare",
+        modeName: "CGHS Card",
+        icon: "heartbeat",
       };
     },
   },

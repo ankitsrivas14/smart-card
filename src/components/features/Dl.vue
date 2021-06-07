@@ -1,5 +1,5 @@
 <template>
-  <SCLayout eventType="Transport">
+  <SCLayout :eventDetails="getModeData">
     <template slot="header-cta">
       <button class="primary-btn">Update Biometrics</button>
       <button class="secondary-btn">Update Biometrics</button>
@@ -19,6 +19,15 @@ import SCLayout from "@/components/shared/SCLayout";
 export default {
   components: {
     SCLayout,
+  },
+  computed: {
+    getModeData() {
+      return {
+        eventName: "Transport",
+        modeName: "Driving Licence",
+        icon: "bus",
+      };
+    },
   },
 };
 </script>

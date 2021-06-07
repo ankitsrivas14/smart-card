@@ -7,9 +7,7 @@
     <template slot="body">
       <img
         class="layout-main-image"
-        :src="require('@/assets/static/features/rc.jpeg')"
-        width="400px"
-        height="250px"
+        :src="require('@/assets/static/features/health.png')"
       />
     </template>
   </SCLayout>
@@ -23,9 +21,9 @@ export default {
   computed: {
     getModeData() {
       return {
-        eventName: "Transport",
-        modeName: "Registration Certificate (RC)",
-        icon: "bus",
+        eventName: "Healthcare",
+        modeName: "Health Insurance",
+        icon: "heartbeat",
       };
     },
   },
