@@ -54,13 +54,13 @@ export default {};
   font-family: Helvetica, Arial, sans-serif;
 }
 
-.modal-header h3 {
+.modal-header .slot-header {
   margin: 0;
   color: #202020;
-  padding: 20px;
   font-size: 22px;
   display: flex;
   justify-content: space-between;
+  width: 100%;
   .sc-modal__header-close {
     cursor: pointer;
   }

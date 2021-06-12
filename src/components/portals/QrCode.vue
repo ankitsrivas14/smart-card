@@ -1,11 +1,9 @@
 <template>
-  <div class="portal-type__inner-container">
-    <div class="cards-list">
-      <div class="row">
-        <img :src="require('@/assets/static/features/qr.svg')" width="900px" alt="QR Code" />
-      </div>
-    </div>
-  </div>
+  <img
+    :src="require('@/assets/static/features/qr.png')"
+    width="900px"
+    alt="QR Code"
+  />
 </template>
 
 <script>

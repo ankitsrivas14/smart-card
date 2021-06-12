@@ -1,13 +1,13 @@
 <template>
   <SCModal>
-    <h3 slot="header">
+    <div class="slot-header" slot="header">
       <div class="sc-modal__header-title">
         {{ getTitle }}
       </div>
       <div class="sc-modal__header-close" @click="handleDialogClose">
         <font-awesome-icon icon="times" />
       </div>
-    </h3>
+    </div>
     <div slot="body">
       <div v-if="!showPin && mode === 'card'" class="sc-modal__body-text">
         Tap your Smart Card on RFID Reader
