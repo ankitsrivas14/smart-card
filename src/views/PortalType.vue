@@ -9,6 +9,7 @@
         <Transport v-if="type === 'transport'" :templateType="templateType" />
         <Health v-if="type === 'health'" :templateType="templateType" />
         <Ration v-if="type === 'ration'" :templateType="templateType" />
+        <QrCode v-if="type === 'qrcode'" :templateType="templateType" />
       </div>
     </div>
   </div>
@@ -20,6 +21,7 @@ import UserId from "../components/portals/UserId.vue";
 import Transport from "../components/portals/Transport.vue";
 import Health from "../components/portals/Health.vue";
 import Ration from "../components/portals/Ration.vue";
+import QrCode from "../components/portals/QrCode.vue";
 
 import { mapGetters } from "vuex";
 
@@ -30,6 +32,7 @@ export default {
     Transport,
     Health,
     Ration,
+    QrCode
   },
   data() {
     return {
