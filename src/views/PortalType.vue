@@ -86,9 +86,11 @@ export default {
 .portal-container {
   .portal-type__container {
     display: flex;
+    width: 100%;
     .portal-type__main-container {
       margin-left: 75px;
       margin-top: 10px;
+      width: 100%;
     }
   }
 }
@@ -102,7 +104,7 @@ export default {
       background-color: #ffefbb;
       border: 15px solid #ffd858;
       border-radius: 25px;
-      margin-right: 30px;
+      margin-right: 55px;
       display: flex;
       align-items: center;
       justify-content: center;
