@@ -6,10 +6,29 @@
         height="80px"
       />
     </div>
+    <BankingOptions
+      @mini-statement="handleMiniStatement"
+      @withdrawl="handleWithdrawl"
+      @change-pin="handleChangePin"
+      @past-transactions="handlePastTransactions"
+      @show-balance="handleShowBalance"
+    />
   </div>
 </template>
 <script>
-export default {};
+import BankingOptions from "./Helpers/BankingOptions.vue";
+export default {
+  components: {
+    BankingOptions,
+  },
+  methods: {
+    handleMiniStatement() {},
+    handleWithdrawl() {},
+    handleChangePin() {},
+    handlePastTransactions() {},
+    handleShowBalance() {},
+  },
+};
 </script>
 <style lang="scss">
 .hdfc_container {
@@ -17,6 +36,7 @@ export default {};
   .hdfc-bank-logo {
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
   }
 }
 </style>
