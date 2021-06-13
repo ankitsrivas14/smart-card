@@ -6,7 +6,10 @@
         <button @click="showDialog = true">Proceed</button>
       </div>
     </div>
-    <BankList v-else />
+    <div class="active-event__container-bank" v-else>
+      <button @click="handleBackToBank" class="back-btn">Exit Banking</button>
+    </div>
+    <BankList v-if="activeEvent" />
     <SCDialog
       v-if="isEntryAllowed && showDialog"
       :activeOption="activeOption"
@@ -39,6 +42,13 @@ export default {
   computed: {
     ...mapGetters(["isEntryAllowed"]),
   },
+  methods: {
+    handleBackToBank() {
+      this.showDialog = false;
+      this.activeEvent = null;
+      this.activeOption = "banks";
+    },
+  },
 };
 </script>
 
@@ -65,5 +75,9 @@ export default {
       color: #fff;
     }
   }
+}
+.active-event__container-bank {
+  margin-bottom: 10px;
+  margin-left: -12px;
 }
 </style>
