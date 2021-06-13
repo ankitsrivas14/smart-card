@@ -18,7 +18,7 @@
 
 <script>
 import SCDialog from "@/components/shared/SCDialog";
-import BankList from "@/components/features/BankList";
+import BankList from "@/components/features/Banks/BankList";
 
 import { mapGetters } from "vuex";
 import portalsMixin from "./portalsMixin";
