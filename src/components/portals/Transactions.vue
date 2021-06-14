@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-if="this.template !== 'agent'">
-      <div class="sc-transaction__filter-container">
+      <div class="sc-transaction__filter-container" v-if="!listType">
         <div class="filter-parent">
           <button
             @click="filterEnabled('banks')"
@@ -157,8 +157,11 @@ import { uuid } from "vue-uuid";
 import { mapGetters } from "vuex";
 export default {
   props: {
-    templateType: {
-      type: Object,
+    listType: {
+      type: String,
+    },
+    bankName: {
+      type: String,
     },
   },
   data() {
@@ -186,7 +189,7 @@ export default {
   mounted() {
     this.generateTransactions();
     this.resetAllFilters();
-    this.itemsToList = [...this.items];
+    this.refreshTable();
   },
   computed: {
     ...mapGetters(["template"]),
@@ -291,6 +294,26 @@ export default {
         });
       }
       this.items = [...data];
+    },
+    refreshTable() {
+      if (this.listType === "mini" && this.bankName) {
+        this.itemsToList = [...this.items]
+          .filter((item) =>
+            item.bank.toLowerCase().includes(this.bankName.toLowerCase())
+          )
+          .slice(0, 5);
+      } else if (this.listType === "full" && this.bankName) {
+        this.itemsToList = [...this.items].filter((item) =>
+          item.bank.toLowerCase().includes(this.bankName.toLowerCase())
+        );
+      } else {
+        this.itemsToList = [...this.items];
+      }
+    },
+  },
+  watch: {
+    listType(val) {
+      this.refreshTable();
     },
   },
 };
