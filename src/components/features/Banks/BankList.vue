@@ -1,16 +1,12 @@
 <template>
   <div>
     <BankCards v-if="!activeBank" @active-bank="handleActivebank" />
-    <hdfc v-if="activeBank === 'hdfc'" />
-    <state v-if="activeBank === 'state'" />
-    <icici v-if="activeBank === 'icici'" />
+    <BankingFeature v-else :activeBank="activeBank" />
   </div>
 </template>
 <script>
 import BankCards from "./BankCards";
-import hdfc from "./Gateways/Hdfc";
-import state from "./Gateways/Hdfc";
-import icici from "./Gateways/Hdfc";
+import BankingFeature from "./Gateways/BankingFeature";
 export default {
   data() {
     return {
@@ -19,9 +15,7 @@ export default {
   },
   components: {
     BankCards,
-    hdfc,
-    state,
-    icici,
+    BankingFeature,
   },
   methods: {
     handleActivebank(active) {
