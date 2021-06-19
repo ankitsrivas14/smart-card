@@ -24,6 +24,12 @@
       listType="full"
       bankName="hdfc"
     />
+    <div class="sc-withdraw-money">
+      <span>
+        Further steps will be as per the banking software already installed at ATMs.<br>
+        We added additional feature on top of existing technology to club all ATM cards into one Smart Card.
+      </span>
+    </div>
   </div>
 </template>
 <script>
@@ -66,6 +72,11 @@ export default {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+  }
+  .sc-withdraw-money{
+    display: grid;
+    place-items: center;
+    height: 150px;
   }
 }
 </style>
