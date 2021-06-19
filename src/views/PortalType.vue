@@ -15,6 +15,10 @@
           v-if="type === 'transactions'"
           :templateType="templateType"
         />
+        <Electricity
+          v-if="type === 'electricity'"
+          :templateType="templateType"
+        />
       </div>
     </div>
   </div>
@@ -29,6 +33,7 @@ import Ration from "../components/portals/Ration.vue";
 import Banks from "../components/portals/Banks.vue";
 import QrCode from "../components/portals/QrCode.vue";
 import Transactions from "../components/portals/Transactions.vue";
+import Electricity from "../components/portals/Electricity.vue";
 
 import { mapGetters } from "vuex";
 
@@ -42,6 +47,7 @@ export default {
     Banks,
     QrCode,
     Transactions,
+    Electricity,
   },
   data() {
     return {
