@@ -2,7 +2,6 @@
   <div class="bank__btn-list">
     <button @click="$emit('past-bills')">Past Bills</button>
     <button @click="$emit('current-bills')">Current Bill</button>
-    <button @click="$emit('live-usage')">Live Usage</button>
     <button @click="$emit('contact-provider')">Contact Provider</button>
     <button class="major-button" @click="$emit('recharge')">
       Recharge

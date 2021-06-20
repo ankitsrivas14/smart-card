@@ -32,6 +32,9 @@
           011-39997005
         </span>
       </div>
+      <div v-if="options.recharge" class="options__current-bill">
+        <ElectricityRecharge />
+      </div>
     </div>
   </div>
 </template>
@@ -39,6 +42,7 @@
 import Bar from "@/components/features/Electricity/Charts/Bar";
 import LineChart from "@/components/features/Electricity/Charts/LineChart";
 import ElectricityOptions from "@/components/features/Electricity/ElectricityOptions";
+import ElectricityRecharge from "@/components/features/Electricity/ElectricityRecharge";
 
 import { mapGetters } from "vuex";
 
@@ -52,6 +56,7 @@ export default {
     Bar,
     LineChart,
     ElectricityOptions,
+    ElectricityRecharge,
   },
   computed: {
     ...mapGetters(["email"]),
@@ -65,7 +70,6 @@ export default {
       this.options = {
         pastBills: false,
         currentBill: false,
-        liveUsage: false,
         contactProvider: false,
         recharge: false,
       };
