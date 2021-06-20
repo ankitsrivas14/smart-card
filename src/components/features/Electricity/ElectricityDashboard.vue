@@ -1,29 +1,28 @@
+<template>
+  <div class="electricity-container">
+    <div class="charts-container">
+      <Bar class="bar-chart" />
+      <LineChart class="line-chart" />
+    </div>
+  </div>
+</template>
 <script>
-import { Bar } from "vue-chartjs";
+import Bar from "@/components/features/Electricity/Charts/Bar";
+import LineChart from "@/components/features/Electricity/Charts/LineChart";
 export default {
-  mixins: [Bar],
-  data() {
-    return {
-      chartdata: {
-        labels: ["January", "February"],
-        datasets: [
-          {
-            label: "Data One",
-            backgroundColor: "#f87979",
-            data: [40, 20],
-          },
-        ],
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-      },
-    };
-  },
-
-  mounted() {
-    this.renderChart(this.chartdata, this.options);
+  components: {
+    Bar,
+    LineChart,
   },
 };
 </script>
-<style lang="scss"></style>
+<style lang="scss">
+.electricity-container {
+  .charts-container {
+    display: flex;
+    .bar-chart {
+      // width: 80%;
+    }
+  }
+}
+</style>
